@@ -69,32 +69,6 @@ $$
 X_{\text{reconstructed}} = \text{Decoder}(Z_{\text{dropout}})
 $$
 
-### Input and Output Images
-The input to the autoencoder consists of low-resolution images, typically of reduced spatial dimensions. These images serve as the basis for training the model. The output of the autoencoder is high-resolution images that ideally resemble the original high-resolution counterparts. The process involves learning a mapping function that can effectively reconstruct fine details lost in the downsampling process.
-
-![Original, Ground Truth, Predicted Super Resolution](Image/Low.png)
-
-### Model Accuracy and Loss
-
-To evaluate the performance of the autoencoder model, we employ key metrics such as `val_accuracy` and `val_loss`. The accuracy metric measures the model's ability to faithfully reproduce high-resolution details, while the loss metric quantifies the dissimilarity between the predicted and actual pixel values. These metrics provide crucial insights into the model's performance during both training and evaluation phases.
-
-| Metric        | Training | Validation   |
-|---------------|----------|--------------|
-| val_loss      | 0.0023   | 0.00080965   |
-| val_accuracy  | 0.9088   | 0.9306       |
-
-### Visualizing Progress
-
-To provide a visual representation of the training process, two essential aspects are illustrated below:
-
-1. **Model Training Time:** The time taken for the model to complete training is depicted below.
-
-![Model Training Time](Image/Screenshot%202024-03-10%20220519.png)
-
-2. **Learning Curves:** The learning curves, including training and validation loss, as well as accuracy, are visualized below.
-
-![Learning Curves](Image/Screenshot%202024-03-10%20222222.png)
-
 ## Main Text
 
 The project aims to explore the transformative potential of autoencoders in the context of Image Super-Resolution (ISR). ISR is a critical task in computer vision, involving the enhancement of low-resolution images to improve visual analysis in various applications. Our hypothesis revolves around the effectiveness of autoencoders in capturing intricate patterns within images and reconstructing high-frequency details lost in the downsampling process. Specifically, we propose that the hierarchical representations learned by the autoencoder architecture can lead to accurate and visually appealing high-resolution reconstructions. The primary goal of this research is to investigate the application of autoencoders for ISR. Autoencoders, being unsupervised learning models, are expected to learn a compact representation of input images, enabling the reconstruction of high-resolution details. The proposed research involves training the autoencoder on a dataset of low-resolution and high-resolution image pairs to facilitate the learning of the mapping function from low to high resolution.
