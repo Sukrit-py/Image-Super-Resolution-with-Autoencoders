@@ -1,4 +1,4 @@
-# Transformative Brilliance in Image Super Resolution with Autoencoders
+# Image Super Resolution with Autoencoders
 
 **Authors:**
 - Uday Sankar Mukherjee (38)
