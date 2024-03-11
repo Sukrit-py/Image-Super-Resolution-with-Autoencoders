@@ -36,7 +36,7 @@ In the pursuit of achieving transformative brilliance in Image Super Resolution 
 ### Model Architecture
 The autoencoder architecture for Image Super Resolution (ISR) is designed to transform low-resolution images (800x1200 pixels, three color channels) into detailed high-resolution reconstructions. Employing convolutional layers, max-pooling, and upsampling, the model compresses and then expands the input space. Key components include dropout layers for regularization and skip connections (add 2 and add 3) to integrate low-level features during reconstruction. The final layer (conv2d 19) outputs a three-channel image representing the high-resolution reconstruction. With 1.1 million trainable parameters, this architecture strikes a balance between complexity and efficiency, demonstrating prowess in capturing and reconstructing intricate details for Image Super Resolution.
 
-![Autoencoder Model Architecture](Image/Screenshot%202024-03-10%20211324.png)
+![Autoencoder Model Architecture](image/Screenshot 2024-03-11 224817.png)
 
 #### Autoencoder Model Parameters (`model_1`)
 
