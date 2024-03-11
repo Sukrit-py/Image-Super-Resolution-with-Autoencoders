@@ -40,7 +40,7 @@ The autoencoder architecture for Image Super Resolution (ISR) is designed to tra
 
 #### Autoencoder Model Parameters (`model_1`)
 
-|------------------|----------------------|---------|
+
 | Layer            | Output Shape         | Param # |
 |------------------|----------------------|---------|
 | input_2          | (None, 800, 1200, 3) | 0       |
@@ -61,13 +61,10 @@ The autoencoder architecture for Image Super Resolution (ISR) is designed to tra
 | conv2d_18        | (None, 800, 1200, 64)| 36928   |
 | add_3            | (None, 800, 1200, 64)| 0       |
 | conv2d_19        | (None, 800, 1200, 3) | 1731    |
-|------------------|---------|------------|---------|
 | Total params               |             1,110,403|
-|----------------------------|----------------------|
 | Trainable params           |             1,110,403|
-|----------------------------|----------------------|
 | Non-trainable params|      |              0       |
-|----------------------------|----------------------|
+
 
 
 
