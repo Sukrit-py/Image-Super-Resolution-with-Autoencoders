@@ -85,10 +85,10 @@ To evaluate the performance of the autoencoder model, we employ key metrics such
 
 | Metric        | Training | Validation   |
 |---------------|----------|--------------|
-| val_loss      | 0.0023   | 0.00080965   |
-| val_accuracy  | 0.9088   | 0.9306       |
+| val_loss      | 0.0023   | 0.00077   |
+| val_accuracy  | 0.9088   | 0.8783       |
 
-Epoch 10 results indicate that the model achieved a training loss of 0.0023 with an accuracy of 0.9088. For the validation set, the loss was 0.00080965, and the accuracy reached 0.9306. It's noteworthy that the validation loss did not improve from the previous best value of 0.00079.
+Epoch 10 results indicate that the model achieved a training loss of 0.0023 with an accuracy of 0.9088. For the validation set, the loss was 0.00077, and the accuracy reached 0.8783. It's noteworthy that the validation loss did not improve from the previous best value of 0.00077.
 
 ### Visualizing Progress
 
@@ -106,7 +106,7 @@ To provide a visual representation of the training process, two essential aspect
 
 In conclusion, the presented project focused on the implementation of an Image Super Resolution (ISR) model utilizing Autoencoders. The primary goal was to enhance the resolution of low-resolution images, particularly in the context of applications such as surveillance and image reconstruction. The project utilized a dataset sourced from Unsplash, comprising pairs of low and high-resolution images.
 
-The proposed hypothesis centered around the ability of Autoencoders to effectively learn and reconstruct high-resolution features from low-resolution inputs. Throughout the training process, the model demonstrated promising results, achieving a final accuracy of 90.88 percent on the training set and 93.06 percent on the validation set during the last epoch. The corresponding loss values were 0.0023 for training and 0.00080965 for validation. Although the model did not observe further improvement in validation loss after the 10th epoch, the achieved accuracy and minimal loss values suggest the effectiveness of the Autoencoder architecture in capturing intricate details during the super-resolution process.
+The proposed hypothesis centered around the ability of Autoencoders to effectively learn and reconstruct high-resolution features from low-resolution inputs. Throughout the training process, the model demonstrated promising results, achieving a final accuracy of 90.88 percent on the training set and 87.83 percent on the validation set during the last epoch. The corresponding loss values were 0.0023 for training and 0.00077 for validation. Although the model did not observe further improvement in validation loss after the 10th epoch, the achieved accuracy and minimal loss values suggest the effectiveness of the Autoencoder architecture in capturing intricate details during the super-resolution process.
 
 The project's success can be attributed to the robust architecture of the Autoencoder, as detailed in the model summary. The encoder-decoder structure, with skip connections and convolutional layers, contributed to the model's ability to capture and reconstruct high-resolution features.
 
@@ -116,12 +116,12 @@ In conclusion, the implemented ISR model showcases the transformative brilliance
 
 ## References
 
-1. Dong, C., Loy, C. C., He, K., \& Tang, X. (2015). Image super-resolution using deep convolutional networks. IEEE transactions on pattern analysis and machine intelligence, 38(2), 295-307. DOI: 10.1109/TPAMI.2015.2439281
+1. https://en.wikipedia.org/wiki/Autoencoder
+   
+2. https://www.coursera.org/projects/image-super-
+resolution-autoencoders-keras
 
-2. Ledig, C., Theis, L., Huszar, F., Caballero, J., Cunningham, A., \& Acosta, A. (2017). Photo-realistic single image super-resolution using a generative adversarial network. In Proceedings of the IEEE conference on computer vision and pattern recognition (CVPR) (pp. 4681-4690). DOI: 10.1109/CVPR.2017.632
+3. https://www.kaggle.com/code/quadeer15sh/image-
+super-resolution-using-autoencoders
 
-3. Zhang, K., Zuo, W., Chen, Y., Meng, D., \& Zhang, L. (2017). Beyond a Gaussian denoiser: Residual learning of deep CNN for image denoising. IEEE Transactions on Image Processing, 26(7), 3142-3155. DOI: 10.1109/TIP.2017.2662206
 
-4. Kingma, D. P., \& Welling, M. (2013). Auto-encoding variational Bayes. arXiv preprint arXiv:1312.6114.
-
-5. He, K., Zhang, X., Ren, S., \& Sun, J. (2016). Deep residual learning for image recognition. In Proceedings of the IEEE conference on computer vision and pattern recognition (CVPR) (pp. 770-778). DOI: 10.1109/CVPR.2016.90
