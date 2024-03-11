@@ -36,15 +36,41 @@ In the pursuit of achieving transformative brilliance in Image Super Resolution 
 ### Model Architecture
 The autoencoder architecture for Image Super Resolution (ISR) is designed to transform low-resolution images (800x1200 pixels, three color channels) into detailed high-resolution reconstructions. Employing convolutional layers, max-pooling, and upsampling, the model compresses and then expands the input space. Key components include dropout layers for regularization and skip connections (add 2 and add 3) to integrate low-level features during reconstruction. The final layer (conv2d 19) outputs a three-channel image representing the high-resolution reconstruction. With 1.1 million trainable parameters, this architecture strikes a balance between complexity and efficiency, demonstrating prowess in capturing and reconstructing intricate details for Image Super Resolution.
 
-![Autoencoder Model Architecture](image/Screenshot 2024-03-11 224817.png)
+![image/Screenshot 2024-03-11 224817.png](https://i.imgur.com/G1YqQO5.png)
 
 #### Autoencoder Model Parameters (`model_1`)
 
-| Layer (type)           | Output Shape         | Param #    |
-|------------------------|----------------------|------------|
-| input_2 (InputLayer)   | (None, 800, 1200, 3) | 0          |
-| conv2d_10 (Conv2D)     | (None, 800, 1200, 64)| 1792       |
-| ...                    | ...                  | ...        |
+|------------------|----------------------|---------|
+| Layer            | Output Shape         | Param # |
+|------------------|----------------------|---------|
+| input_2          | (None, 800, 1200, 3) | 0       |
+| conv2d_10        | (None, 800, 1200, 64)| 1792    |
+| conv2d_11        | (None, 800, 1200, 64)| 36928   |
+| max_pooling2d_2  | (None, 400, 600, 64) | 0       |
+| dropout_1        | (None, 400, 600, 64) | 0       |
+| conv2d_12        | (None, 400, 600, 128)| 73856   |
+| conv2d_13        | (None, 400, 600, 128)| 147584  |
+| max_pooling2d_3  | (None, 200, 300, 128)| 0       |
+| conv2d_14        | (None, 200, 300, 256)| 295168  |
+| up_sampling2d_2  | (None, 400, 600, 256)| 0       |
+| conv2d_15        | (None, 400, 600, 128)| 295040  |
+| conv2d_16        | (None, 400, 600, 128)| 147584  |
+| add_2            | (None, 400, 600, 128)| 0       |
+| up_sampling2d_3  | (None, 800, 1200, 128)| 0      |
+| conv2d_17        | (None, 800, 1200, 64)| 73792   |
+| conv2d_18        | (None, 800, 1200, 64)| 36928   |
+| add_3            | (None, 800, 1200, 64)| 0       |
+| conv2d_19        | (None, 800, 1200, 3) | 1731    |
+|------------------|---------|------------|---------|
+| Total params               |             1,110,403|
+|----------------------------|----------------------|
+| Trainable params           |             1,110,403|
+|----------------------------|----------------------|
+| Non-trainable params|      |              0       |
+|----------------------------|----------------------|
+
+
+
 
 ### Equations
 
@@ -77,7 +103,7 @@ The project aims to explore the transformative potential of autoencoders in the 
 
 The input to the autoencoder consists of low-resolution images, typically of reduced spatial dimensions. These images serve as the basis for training the model. The output of the autoencoder is high-resolution images that ideally resemble the original high-resolution counterparts. The process involves learning a mapping function that can effectively reconstruct fine details lost in the downsampling process.
 
-![Original, Ground Truth, Predicted Super Resolution](Image/Low.png)
+![Original, Ground Truth, Predicted Super Resolution](https://i.imgur.com/3XJMiWq.png)
 
 ### Model Accuracy and Loss
 
@@ -85,7 +111,7 @@ To evaluate the performance of the autoencoder model, we employ key metrics such
 
 | Metric        | Training | Validation   |
 |---------------|----------|--------------|
-| val_loss      | 0.0023   | 0.00077   |
+| val_loss      | 0.0023   | 0.00077      |
 | val_accuracy  | 0.9088   | 0.8783       |
 
 Epoch 10 results indicate that the model achieved a training loss of 0.0023 with an accuracy of 0.9088. For the validation set, the loss was 0.00077, and the accuracy reached 0.8783. It's noteworthy that the validation loss did not improve from the previous best value of 0.00077.
@@ -96,11 +122,11 @@ To provide a visual representation of the training process, two essential aspect
 
 1. **Model Training Time:** The time taken for the model to complete training is depicted below.
 
-![Model Training Time](Image/Screenshot%202024-03-10%20220519.png)
+![Model Training Time](https://i.imgur.com/1SselHd.png)
 
 2. **Learning Curves:** The learning curves, including training and validation loss, as well as accuracy, are visualized below.
 
-![Learning Curves](Image/Screenshot%202024-03-10%20222222.png)
+![Learning Curves](https://i.imgur.com/Es4Dy3Z.png)
 
 ## Conclusion
 
