@@ -144,7 +144,4 @@ In conclusion, the implemented ISR model showcases the transformative brilliance
 2. https://www.coursera.org/projects/image-super-
 resolution-autoencoders-keras
 
-3. https://www.kaggle.com/code/quadeer15sh/image-
-super-resolution-using-autoencoders
-
 
